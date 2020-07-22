@@ -13,7 +13,7 @@ def list_users(file_name):
 
 def handler():
     parser = argparse.ArgumentParser()
-    parser.add_argument("file", help="Power BI service url with user list")
+    parser.add_argument('file', help='Power BI service url with user list')
     args = parser.parse_args()
 
     if args.file:
