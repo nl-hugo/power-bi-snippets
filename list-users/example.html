@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" prevent-focus-loss="true" class="">
+<!--omitted-->
+<section class="accessUserListSection">
+    <ul>
+        <li class="accessListData"
+            ng-repeat="member in filteredMembers = ($ctrl.model.members | filter: { displayName: $ctrl.model.searchFilter })">
+            <span class="username trimmedTextWithEllipsis" ng-bind="$ctrl.getMemberDisplayName(member)"
+                  title="Alice">Alice</span>
+            <div class="action"><!----> <!---->
+                <button ng-if="::$ctrl.isAdmin" class="optionsMenu glyphicon pbi-glyph-more glyph-small"
+                        dropdown-menu="" dropdown-items="$ctrl.getValidMenuItemsForMember(member)"
+                        dropdown-on-item-selected="$ctrl.onMemberAccessMenuItemSelected(member, selected.action)"
+                        localize-tooltip="Actions" ng-disabled="$ctrl.isSaving" title="Acties"></button><!---->
+                <div class="performAction" ng-switch="member.permission"><!----><!----><!----><!----><span
+                        ng-switch-when="1" localize="GroupEditor_RoleOptions_Viewer"
+                        localize-attr="{title: 'GroupEditor_RoleOptions_ViewerTooltip'}"
+                        title="Hiermee wordt de inhoud van de werkruimte weergegeven">Lezer</span><!----><!----><!---->
+                </div>
+            </div>
+        </li><!---->
+        <li class="accessListData"
+            ng-repeat="member in filteredMembers = ($ctrl.model.members | filter: { displayName: $ctrl.model.searchFilter })">
+            <span class="username trimmedTextWithEllipsis" ng-bind="$ctrl.getMemberDisplayName(member)"
+                  title="Bob">Bob</span>
+            <div class="action"><!----> <!---->
+                <button ng-if="::$ctrl.isAdmin" class="optionsMenu glyphicon pbi-glyph-more glyph-small"
+                        dropdown-menu="" dropdown-items="$ctrl.getValidMenuItemsForMember(member)"
+                        dropdown-on-item-selected="$ctrl.onMemberAccessMenuItemSelected(member, selected.action)"
+                        localize-tooltip="Actions" ng-disabled="$ctrl.isSaving" title="Acties"></button><!---->
+                <div class="performAction" ng-switch="member.permission"><!----><!----><!----><!----><span
+                        ng-switch-when="1" localize="GroupEditor_RoleOptions_Viewer"
+                        localize-attr="{title: 'GroupEditor_RoleOptions_ViewerTooltip'}"
+                        title="Hiermee wordt de inhoud van de werkruimte weergegeven">Lezer</span><!----><!----><!---->
+                </div>
+            </div>
+        </li><!---->
+        <li class="accessListData"
+            ng-repeat="member in filteredMembers = ($ctrl.model.members | filter: { displayName: $ctrl.model.searchFilter })">
+            <span class="username trimmedTextWithEllipsis" ng-bind="$ctrl.getMemberDisplayName(member)"
+                  title="Carol">Carol</span>
+            <div class="action"><!----> <!---->
+                <button ng-if="::$ctrl.isAdmin" class="optionsMenu glyphicon pbi-glyph-more glyph-small"
+                        dropdown-menu="" dropdown-items="$ctrl.getValidMenuItemsForMember(member)"
+                        dropdown-on-item-selected="$ctrl.onMemberAccessMenuItemSelected(member, selected.action)"
+                        localize-tooltip="Actions" ng-disabled="$ctrl.isSaving" title="Acties"></button><!---->
+                <div class="performAction" ng-switch="member.permission"><!----><span ng-switch-when="13"
+                                                                                      localize="GroupEditor_RoleOptions_Member"
+                                                                                      localize-attr="{title: 'GroupEditor_RoleOptions_MemberTooltip'}"
+                                                                                      title="Hiermee kunt u de inhoud in de werkruimte beheren, inhoud delen en gebruikers aan de werkruimte toevoegen">Lid</span>
+                    <!----><!----><!----><!----><!----><!----></div>
+            </div>
+        </li><!---->
+
+        <li class="accessListData"
+            ng-repeat="member in filteredMembers = ($ctrl.model.members | filter: { displayName: $ctrl.model.searchFilter })">
+            <span class="username trimmedTextWithEllipsis" ng-bind="$ctrl.getMemberDisplayName(member)"
+                  title="Dave">Dave</span>
+            <div class="action"><!----> <!---->
+                <button ng-if="::$ctrl.isAdmin" class="optionsMenu glyphicon pbi-glyph-more glyph-small"
+                        dropdown-menu="" dropdown-items="$ctrl.getValidMenuItemsForMember(member)"
+                        dropdown-on-item-selected="$ctrl.onMemberAccessMenuItemSelected(member, selected.action)"
+                        localize-tooltip="Actions" ng-disabled="$ctrl.isSaving" title="Acties"></button><!---->
+                <div class="performAction" ng-switch="member.permission"><!----><!----><span ng-switch-when="9"
+                                                                                             localize="GroupEditor_RoleOptions_Contributor"
+                                                                                             localize-attr="{title: 'GroupEditor_RoleOptions_ContributorTooltip'}"
+                                                                                             title="Hiermee kunt u de inhoud in de werkruimte beheren">Inzender</span>
+                    <!----><!----><!----><!----><!----></div>
+            </div>
+        </li><!---->
+        <li class="accessListData"
+            ng-repeat="member in filteredMembers = ($ctrl.model.members | filter: { displayName: $ctrl.model.searchFilter })">
+            <span class="username trimmedTextWithEllipsis" ng-bind="$ctrl.getMemberDisplayName(member)"
+                  title="Eve">Eve</span>
+            <div class="action"><!----> <!---->
+                <button ng-if="::$ctrl.isAdmin" class="optionsMenu glyphicon pbi-glyph-more glyph-small"
+                        dropdown-menu="" dropdown-items="$ctrl.getValidMenuItemsForMember(member)"
+                        dropdown-on-item-selected="$ctrl.onMemberAccessMenuItemSelected(member, selected.action)"
+                        localize-tooltip="Actions" ng-disabled="$ctrl.isSaving" title="Acties"></button><!---->
+                <div class="performAction" ng-switch="member.permission"><!----><!----><!----><span ng-switch-when="15"
+                                                                                                    localize="GroupEditor_RoleOptions_Admin"
+                                                                                                    localize-attr="{title: 'GroupEditor_RoleOptions_AdminTooltip'}"
+                                                                                                    title="Hiermee kunt u de werkruimte en bijbehorende inhoud en de toegang tot de werkruimte beheren">Beheerder</span>
+                    <!----><!----><!----><!----></div>
+            </div>
+        </li><!---->
+
+        </li><!----></ul>
+</section>
+</html>
